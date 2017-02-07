@@ -56,10 +56,40 @@ input {
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
+  #slogan {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {
- 
+  #slogan {
+    position: absolute;
+    top: 250px;
+    font-size: 50px;
+    line-height: 75px;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+    text-align: center;
+  }
+  #main {
+    display: flex;
+    width: 100vm;
+  }
+  #intro {
+    order: 1;
+    flex: 2;
+    font-size: 22px;
+    line-height: 26px;
+    padding-right: 20px;
+  }
+  #signup {
+    order: 2;
+    flex: 1;
+    border-top-style: none;
+    padding-left: 12px;
+    padding-top:6px;
+  }
 }
 
