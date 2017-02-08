@@ -12,16 +12,15 @@ $.noConflict();
         var name = $('#name').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
-       /* var currentValue = $('#email').val();
-        var validPattern = $('#email').attr('pattern');
-        console.log(currentValue,validPattern); */
-       
+        var emailCurrentValue = $('#email').val();
+        var emailValidPattern = $('#email').attr('pattern');
+         
         if (name === '') {
           alert('Name can not be blank.');
           return false;
         }
-        if (email === '') {
-          alert('Email can not be blank.');
+        if (!(emailCurrentValue.match(emailValidPattern))) {
+          alert('Please enter a valid email address');
           return false;
         }
         if (phone === '') {
@@ -29,7 +28,6 @@ $.noConflict();
           return false;
         }
         $('#signup-form').append(successMsg);
-        console.log($('#name').val(), "  <end here>");
         e.preventDefault();
       });
     })
