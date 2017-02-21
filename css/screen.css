@@ -125,7 +125,9 @@ input[type=submit] {
   border-radius: 12px;
   margin-top: 10px;
 }
-
+.blue-text {
+  color: blue;
+}
 /* ===== MODULAR STYLES ===== */
 
 /* ===== STATE STYLES ===== */

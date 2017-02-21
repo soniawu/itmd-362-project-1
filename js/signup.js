@@ -14,7 +14,7 @@ $.noConflict();
         var phone = $('#phone').val();
         var emailCurrentValue = $('#email').val();
         var emailValidPattern = $('#email').attr('pattern');
-        var successMsg = '<p id="rspn-msg">'+ name + ', thank you for signup the running event. Email will be sent to you for the login process</p>';
+        var successMsg = '<p id="rspn-msg"><span class="blue-text">'+ name + ',</span> thank you for signup the running event. Email will be sent to you for the login process</p>';
          
         if (name === '') {
           alert('Name can not be blank.');
