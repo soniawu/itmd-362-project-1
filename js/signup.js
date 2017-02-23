@@ -6,7 +6,7 @@ $.noConflict();
     function() {
       $('html').removeClass('nojs');
       $('html').addClass('hasjs');
-      $('input#signup-bnt').prop("disabled",false);
+      $('input#signup-bnt').prop("disabled", false);
       $('#signup-form').on('submit', function(e) {
          
         var name = $('#name').val();
@@ -44,7 +44,7 @@ $.noConflict();
           return false;
         } 
         $('#signup-form').append(successMsg);
-        $('input#signup-bnt').prop("disabled",true);
+        $('input#signup-bnt').prop("disabled", true);
         
         e.preventDefault();
       });
