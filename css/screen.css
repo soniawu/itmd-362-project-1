@@ -157,7 +157,7 @@ input[type="submit"] {
     order: 1;
     flex: 5;
     font-size: 1.333em;  /* 24px 1.333em @ 18px */
-    line-height: 2.5em;  /* 60px 2.5em @ 24px */
+    line-height: 2em;  /* 48px 2em @ 24px */
     padding-right: 0.833em; /* 20px 0.833em @ 24px */
   }
   #signup {
