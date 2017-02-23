@@ -169,7 +169,6 @@ input[type=submit] {
   #signup {
     order: 2;
     flex: 3;
-    /*border-top-style: none; */
   }
 }
 
