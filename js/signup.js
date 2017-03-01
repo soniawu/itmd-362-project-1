@@ -6,9 +6,14 @@ $.noConflict();
     function() {
       $('html').removeClass('nojs');
       $('html').addClass('hasjs');
-      $('input#signup-bnt').prop("disabled", false);
+      // When page is refreshed, unhide the signup button
+      // Empty input fields
+      $('input#signup-bnt').removeClass('hide');
+      $('#name').val('');
+      $('#email').val('');
+      $('#phone').val('');
+      
       $('#signup-form').on('submit', function(e) {
-         
         var name = $('#name').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
@@ -44,7 +49,7 @@ $.noConflict();
           return false;
         } 
         $('#signup-form').append(successMsg);
-        $('input#signup-bnt').prop("disabled", true);
+        $('input#signup-bnt').addClass('hide');
         
         e.preventDefault();
       });
