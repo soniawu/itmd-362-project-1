@@ -4,6 +4,8 @@ $.noConflict();
 (function($) {
   $(document).ready(
     function() {
+      // Not utilizing nojs/hasjs classes this time. 
+      // Leave them here as a pattern for future reference.
       $('html').removeClass('nojs');
       $('html').addClass('hasjs');
       // When page is refreshed, unhide the signup button
@@ -13,6 +15,7 @@ $.noConflict();
       $('#email').val('');
       $('#phone').val('');
       
+      // Listen to the form submit.
       $('#signup-form').on('submit', function(e) {
         var name = $('#name').val();
         var email = $('#email').val();
@@ -24,6 +27,8 @@ $.noConflict();
         
         var successMsg = '<p id="rspn-msg"><span class="blue-text">'+ name + ',</span> thank you for signup the running event. Email will be sent to you for the login process</p>';
          
+        // Validation maybe done in HTML by pattern attribute for some browsers,
+        // but not for others. Do additional validation here.
         if (name === '') {
           alert('Name can not be blank.');
           return false;
@@ -48,6 +53,9 @@ $.noConflict();
           alert('Please enter your phone number at "xxx-xxx-xxxx or xxxxxxxxxx" format');
           return false;
         } 
+        
+        // All fields are valid. form is submitted.
+        // Post reply message and hide the sign up button.
         $('#signup-form').append(successMsg);
         $('input#signup-bnt').addClass('hide');
         

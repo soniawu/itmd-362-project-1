@@ -123,14 +123,13 @@ input[type="submit"] {
 .blue-text {
   color: blue;
 }
+.hide {
+  position: absolute;
+  left: -3333.333em;  /* -6000px -3333.333em @ 18px */
+}
 /* ===== MODULAR STYLES ===== */
 
 /* ===== STATE STYLES ===== */
-.hide  {
-  position: absolute;
-  left: -60000px;
-}
-
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
